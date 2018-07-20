@@ -28,6 +28,8 @@
 		F271B972210176EB001F6E98 /* AppRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271B971210176EB001F6E98 /* AppRateViewController.swift */; };
 		F271B97621017A72001F6E98 /* pdf-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F271B97421017A72001F6E98 /* pdf-logo@3x.png */; };
 		F271B97721017A72001F6E98 /* tv-series1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F271B97521017A72001F6E98 /* tv-series1.jpg */; };
+		F271B9792101E807001F6E98 /* AppControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271B9782101E807001F6E98 /* AppControl.swift */; };
+		F271B97C21020B91001F6E98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F271B97B21020B91001F6E98 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		F271B971210176EB001F6E98 /* AppRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRateViewController.swift; sourceTree = "<group>"; };
 		F271B97421017A72001F6E98 /* pdf-logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pdf-logo@3x.png"; sourceTree = "<group>"; };
 		F271B97521017A72001F6E98 /* tv-series1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tv-series1.jpg"; sourceTree = "<group>"; };
+		F271B9782101E807001F6E98 /* AppControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppControl.swift; sourceTree = "<group>"; };
+		F271B97A21020AEE001F6E98 /* PDF Reader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PDF Reader.entitlements"; sourceTree = "<group>"; };
+		F271B97B21020B91001F6E98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,8 @@
 		186159BF1D953B3F001E64E3 /* PDF Reader */ = {
 			isa = PBXGroup;
 			children = (
+				F271B97B21020B91001F6E98 /* GoogleService-Info.plist */,
+				F271B97A21020AEE001F6E98 /* PDF Reader.entitlements */,
 				F271B97321017A72001F6E98 /* Images */,
 				F271B960210137D1001F6E98 /* Extensions */,
 				18360B941DBA2ABE00CE2105 /* PDF */,
@@ -107,6 +114,7 @@
 				186159C71D953B3F001E64E3 /* Assets.xcassets */,
 				186159C91D953B3F001E64E3 /* LaunchScreen.storyboard */,
 				186159CC1D953B3F001E64E3 /* Info.plist */,
+				F271B9782101E807001F6E98 /* AppControl.swift */,
 				F271B95421012DF6001F6E98 /* FirstViewController.swift */,
 				F271B95621013193001F6E98 /* Src1 */,
 				F271B95A21013194001F6E98 /* Src2 */,
@@ -209,6 +217,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = QFRSMX53PG;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -241,6 +257,7 @@
 				186159C61D953B3F001E64E3 /* Main.storyboard in Resources */,
 				F271B97721017A72001F6E98 /* tv-series1.jpg in Resources */,
 				A602CC2B20FB63ED00898C0E /* Liste_des_chaines.pdf in Resources */,
+				F271B97C21020B91001F6E98 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +273,25 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PDF Reader/Pods-PDF Reader-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BRYXBanner/BRYXBanner.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRYXBanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -303,6 +330,7 @@
 				F271B95C21013194001F6E98 /* PDFPageViewController.swift in Sources */,
 				F271B96E21016AF9001F6E98 /* ConnectServerViewController.swift in Sources */,
 				F271B972210176EB001F6E98 /* AppRateViewController.swift in Sources */,
+				F271B9792101E807001F6E98 /* AppControl.swift in Sources */,
 				F271B95521012DF6001F6E98 /* FirstViewController.swift in Sources */,
 				F271B96421013BFC001F6E98 /* Src2ViewController.swift in Sources */,
 				F271B96821013FBA001F6E98 /* InputPhoneViewController.swift in Sources */,
@@ -434,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "PDF Reader/PDF Reader.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QFRSMX53PG;
@@ -461,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "PDF Reader/PDF Reader.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QFRSMX53PG;

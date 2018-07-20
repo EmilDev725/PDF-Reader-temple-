@@ -13,6 +13,8 @@ class InputNameViewController: UIViewController {
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tfYourName: UITextField!
     
+    var interstitial: GADInterstitial!
+    
     // MARK: - Life cycle functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,7 @@ class InputNameViewController: UIViewController {
 //        self.navigationItem.hidesBackButton = true
        
         loadBanner()
-        showInterstital()
+        loadInterstitial()
     }
     
     func loadBanner() {
@@ -29,13 +31,19 @@ class InputNameViewController: UIViewController {
         bannerView.load(GADRequest())
     }
     
+    func loadInterstitial()
+    {
+        interstitial = GADInterstitial(adUnitID: AppControl.sharedInstance.INTERSTITIAL)
+        let request = GADRequest()
+        interstitial.load(request)
+    }
     
     func showInterstital()
     {
-        if appDelegate.interstitial.isReady {
-            appDelegate.interstitial.present(fromRootViewController: self)
-            appDelegate.loadInterstitial()
-        }else{
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+            self.loadInterstitial()
+        } else {
             print("Ad wasn't ready")
         }
     }
@@ -45,6 +53,7 @@ class InputNameViewController: UIViewController {
         if (tfYourName.text == "") {
             Notificator.show(errorMessage: "Enter your name")
         }else {
+            showInterstital()
             self.performSegue(withIdentifier: "pushToInputPhoneNumber", sender: self)
         }
     }

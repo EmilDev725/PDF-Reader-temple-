@@ -13,6 +13,12 @@ target 'PDF Reader' do
     pod 'SVProgressHUD'
     pod 'BRYXBanner'
     
+    #Firebase
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Messaging'
+    pod 'Firebase/Auth'
+    
   # Pods for PDF Reader
 
 end

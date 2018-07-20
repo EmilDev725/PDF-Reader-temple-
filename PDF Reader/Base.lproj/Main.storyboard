@@ -752,40 +752,65 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tv-series1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IGu-S2-QEk">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGu-S2-QEk">
                                         <rect key="frame" x="131.5" y="161.5" width="112.5" height="99.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="IGu-S2-QEk" secondAttribute="height" multiplier="1000:882" id="6Kp-dH-QLc"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaC-re-HDx">
+                                        <rect key="frame" x="131.5" y="161.5" width="112.5" height="99.5"/>
+                                        <state key="normal" title="Button" backgroundImage="tv-series1.jpg"/>
+                                        <connections>
+                                            <action selector="click_btn_AppRate:" destination="5AF-79-UOW" eventType="touchUpInside" id="Z49-nE-9UZ"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Televisao sem Internet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sET-jp-X03">
-                                        <rect key="frame" x="119" y="271" width="137" height="16"/>
+                                        <rect key="frame" x="119" y="271" width="137" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: the verification process can take up to 48 hours, in case this does not work repeat the same steps" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwo-lL-7rL">
-                                        <rect key="frame" x="19" y="317" width="337.5" height="61"/>
+                                        <rect key="frame" x="19" y="329" width="337.5" height="61"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUA-mt-jaD">
+                                        <rect key="frame" x="119" y="271" width="137" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Televisao sem Internet">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="click_btn_AppRate:" destination="5AF-79-UOW" eventType="touchUpInside" id="iRx-7N-Dyr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="hUA-mt-jaD" firstAttribute="trailing" secondItem="sET-jp-X03" secondAttribute="trailing" id="06u-Ov-zXl"/>
                                     <constraint firstItem="Nwo-lL-7rL" firstAttribute="width" secondItem="jQU-kC-kKM" secondAttribute="width" id="1Gl-70-9jD"/>
+                                    <constraint firstItem="hUA-mt-jaD" firstAttribute="bottom" secondItem="sET-jp-X03" secondAttribute="bottom" id="2Fq-gT-pDG"/>
                                     <constraint firstItem="Zp6-VY-gYc" firstAttribute="leading" secondItem="THK-uA-YHP" secondAttribute="leading" constant="16" id="2is-ka-fhD"/>
                                     <constraint firstAttribute="bottom" secondItem="Zp6-VY-gYc" secondAttribute="bottom" id="7q2-7m-xBr"/>
+                                    <constraint firstItem="SaC-re-HDx" firstAttribute="leading" secondItem="IGu-S2-QEk" secondAttribute="leading" id="9Y2-d0-bt1"/>
                                     <constraint firstAttribute="trailing" secondItem="Zp6-VY-gYc" secondAttribute="trailing" constant="16" id="G6l-dY-wZK"/>
                                     <constraint firstItem="Nwo-lL-7rL" firstAttribute="top" secondItem="sET-jp-X03" secondAttribute="bottom" constant="30" id="Io3-Kp-slb"/>
+                                    <constraint firstItem="hUA-mt-jaD" firstAttribute="top" secondItem="sET-jp-X03" secondAttribute="top" id="LkT-kZ-CaG"/>
                                     <constraint firstItem="jQU-kC-kKM" firstAttribute="top" secondItem="THK-uA-YHP" secondAttribute="top" constant="30" id="Lvc-WG-nF7"/>
                                     <constraint firstItem="sET-jp-X03" firstAttribute="top" secondItem="IGu-S2-QEk" secondAttribute="bottom" constant="10" id="Oqo-aP-mnF"/>
                                     <constraint firstItem="IGu-S2-QEk" firstAttribute="width" secondItem="THK-uA-YHP" secondAttribute="width" multiplier="0.3" id="aC3-kP-h2U"/>
                                     <constraint firstItem="IGu-S2-QEk" firstAttribute="top" secondItem="jQU-kC-kKM" secondAttribute="bottom" constant="30" id="b7R-yH-wKX"/>
                                     <constraint firstItem="jQU-kC-kKM" firstAttribute="centerX" secondItem="THK-uA-YHP" secondAttribute="centerX" id="d3I-Sr-us0"/>
+                                    <constraint firstItem="SaC-re-HDx" firstAttribute="bottom" secondItem="IGu-S2-QEk" secondAttribute="bottom" id="eIv-pe-tuK"/>
                                     <constraint firstItem="Nwo-lL-7rL" firstAttribute="centerX" secondItem="THK-uA-YHP" secondAttribute="centerX" id="esb-CQ-2nw"/>
                                     <constraint firstItem="sET-jp-X03" firstAttribute="centerX" secondItem="THK-uA-YHP" secondAttribute="centerX" id="mEf-Gu-Qrz"/>
+                                    <constraint firstItem="SaC-re-HDx" firstAttribute="trailing" secondItem="IGu-S2-QEk" secondAttribute="trailing" id="o3D-DH-yJn"/>
                                     <constraint firstItem="jQU-kC-kKM" firstAttribute="width" secondItem="THK-uA-YHP" secondAttribute="width" multiplier="0.9" id="qGa-fR-eAD"/>
+                                    <constraint firstItem="SaC-re-HDx" firstAttribute="top" secondItem="IGu-S2-QEk" secondAttribute="top" id="vfm-IG-DTA"/>
+                                    <constraint firstItem="hUA-mt-jaD" firstAttribute="leading" secondItem="sET-jp-X03" secondAttribute="leading" id="wiz-TQ-TgS"/>
                                     <constraint firstItem="IGu-S2-QEk" firstAttribute="centerX" secondItem="THK-uA-YHP" secondAttribute="centerX" id="zQw-bV-MOA"/>
                                 </constraints>
                             </view>
@@ -837,17 +862,29 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-A0-qJz" customClass="GADBannerView">
+                                <rect key="frame" x="16" y="607" width="343" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Y9V-RR-c3W"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="nuR-kV-etq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Rah-xh-F36" firstAttribute="top" secondItem="bFZ-A0-qJz" secondAttribute="bottom" id="JO1-uI-UEd"/>
+                            <constraint firstAttribute="trailing" secondItem="bFZ-A0-qJz" secondAttribute="trailing" constant="16" id="O4v-J0-nMR"/>
                             <constraint firstItem="96j-GP-wfy" firstAttribute="centerX" secondItem="wz0-kc-FkB" secondAttribute="centerX" id="Tsf-ZB-k0A"/>
                             <constraint firstItem="TEV-rg-RwZ" firstAttribute="centerY" secondItem="wz0-kc-FkB" secondAttribute="centerY" multiplier="0.7" id="pJp-Xl-FvZ"/>
                             <constraint firstItem="96j-GP-wfy" firstAttribute="centerY" secondItem="wz0-kc-FkB" secondAttribute="centerY" multiplier="1.1" id="qDm-fo-tqn"/>
                             <constraint firstItem="TEV-rg-RwZ" firstAttribute="centerX" secondItem="wz0-kc-FkB" secondAttribute="centerX" id="qmF-qI-Ss2"/>
+                            <constraint firstItem="bFZ-A0-qJz" firstAttribute="leading" secondItem="wz0-kc-FkB" secondAttribute="leading" constant="16" id="tYh-Yl-lYA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rte-Jx-8yG"/>
                     <connections>
+                        <outlet property="bannerView" destination="bFZ-A0-qJz" id="5pa-m5-Ioo"/>
                         <segue destination="E46-Od-xGH" kind="show" identifier="pushToInputName" id="NZb-GP-6zb"/>
                     </connections>
                 </viewController>

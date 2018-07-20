@@ -10,9 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SVProgressHUD
+import GoogleMobileAds
 
 class FirstViewController: UIViewController {
     let API_URL = "http://betafind.com/tv/api.json"
+    
+    var interstitial: GADInterstitial!
     
     // MARK: - Life cycle functions
     override func viewDidLoad() {
@@ -28,10 +31,13 @@ class FirstViewController: UIViewController {
             switch response.result {
             case .success(_):
                 let jsonObject = JSON(response.result.value!)
-                let flag: Bool = jsonObject["App2"].boolValue
+                AppControl.sharedInstance.initWithJSON(json: jsonObject)
+                let flag: Bool = AppControl.sharedInstance.App2
                 if (flag == false) {
                     self.performSegue(withIdentifier: "pushToSRC1", sender: self)
                 }else {
+                    self.loadInterstitial()
+                    self.showInterstital()
                     self.performSegue(withIdentifier: "pushToSRC2", sender: self)
                 }
                 break
@@ -39,6 +45,23 @@ class FirstViewController: UIViewController {
                 print(error)
                 break
             }
+        }
+    }
+    
+    func loadInterstitial()
+    {
+        interstitial = GADInterstitial(adUnitID: AppControl.sharedInstance.INTERSTITIAL)
+        let request = GADRequest()
+        interstitial.load(request)
+    }
+    
+    func showInterstital()
+    {
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+            self.loadInterstitial()
+        } else {
+            print("Ad wasn't ready")
         }
     }
 }

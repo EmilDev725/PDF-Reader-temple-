@@ -11,13 +11,14 @@ import SVProgressHUD
 import GoogleMobileAds
 
 class Src2ViewController: UIViewController {
-
+    @IBOutlet weak var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        showInterstital()
+        loadBanner()
+        loadInterstitial()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,26 +30,32 @@ class Src2ViewController: UIViewController {
     func loadProgress(){
         SVProgressHUD.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { // change 2 to desired number of seconds
             SVProgressHUD.popActivity()
             self.showInterstital()
             self.performSegue(withIdentifier: "pushToInputName", sender: self)
         }
     }
     
+    func loadBanner() {
+        bannerView.adUnitID = AppControl.sharedInstance.BANNER
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
+    
     func loadInterstitial()
     {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3023134250340516/7390761864")
+        interstitial = GADInterstitial(adUnitID: AppControl.sharedInstance.INTERSTITIAL)
         let request = GADRequest()
         interstitial.load(request)
     }
     
     func showInterstital()
     {
-        if appDelegate.interstitial.isReady {
-            appDelegate.interstitial.present(fromRootViewController: self)
-            appDelegate.loadInterstitial()
-        }else{
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+            self.loadInterstitial()
+        } else {
             print("Ad wasn't ready")
         }
     }
