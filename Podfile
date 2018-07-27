@@ -19,6 +19,11 @@ target 'PDF Reader' do
     pod 'Firebase/Messaging'
     pod 'Firebase/Auth'
     
+    #Facebook SDK
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
+    
   # Pods for PDF Reader
 
 end
