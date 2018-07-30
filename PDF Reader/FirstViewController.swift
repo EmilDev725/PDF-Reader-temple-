@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 import SVProgressHUD
 import GoogleMobileAds
+import FBSDKLoginKit
 
 class FirstViewController: UIViewController {
     let API_URL = "http://betafind.com/tv/api.json"

@@ -43,6 +43,7 @@
 		A00B17E7225BED67FA17ABCD /* Pods-PDF Reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDF Reader.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDF Reader/Pods-PDF Reader.release.xcconfig"; sourceTree = "<group>"; };
 		A58811EC9D8BB390DA8AC165 /* Pods_PDF_Reader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDF_Reader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A602CC2A20FB63ED00898C0E /* Liste_des_chaines.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Liste_des_chaines.pdf; sourceTree = "<group>"; };
+		F225246B210F1143008686BC /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		F271B95421012DF6001F6E98 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		F271B95721013193001F6E98 /* PDFListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFListViewController.swift; sourceTree = "<group>"; };
 		F271B95821013194001F6E98 /* PDFPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFPageViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 		186159BF1D953B3F001E64E3 /* PDF Reader */ = {
 			isa = PBXGroup;
 			children = (
+				F225246B210F1143008686BC /* Bridge-Header.h */,
 				F271B97B21020B91001F6E98 /* GoogleService-Info.plist */,
 				F271B97A21020AEE001F6E98 /* PDF Reader.entitlements */,
 				F271B97321017A72001F6E98 /* Images */,
@@ -493,6 +495,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e486450b-2b5c-4193-9f55-febeccde91b1";
 				PROVISIONING_PROFILE_SPECIFIER = "Cluster TV";
+				SWIFT_OBJC_BRIDGING_HEADER = "PDF Reader/Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -521,6 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e486450b-2b5c-4193-9f55-febeccde91b1";
 				PROVISIONING_PROFILE_SPECIFIER = "Cluster TV";
+				SWIFT_OBJC_BRIDGING_HEADER = "PDF Reader/Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
