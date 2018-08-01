@@ -10,6 +10,7 @@ import UIKit
 import GoogleMobileAds
 import Firebase
 import UserNotifications
+import FacebookCore
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -64,6 +65,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         }
         
         application.registerForRemoteNotifications()
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        AppEventsLogger.activate(application)
+        
     }
     
     // [START receive_message]
