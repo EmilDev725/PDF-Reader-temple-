@@ -20,7 +20,7 @@ class PDFListViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        bannerView.adUnitID = "ca-app-pub-3023134250340516/8951255542"
+        bannerView.adUnitID = AppControl.sharedInstance.BANNER
         self.loadInterstitial()
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
@@ -49,7 +49,7 @@ class PDFListViewController: UITableViewController
     }
     func loadInterstitial()
     {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3023134250340516/7390761864")
+        interstitial = GADInterstitial(adUnitID: AppControl.sharedInstance.INTERSTITIAL)
         let request = GADRequest()
         interstitial.load(request)
     }

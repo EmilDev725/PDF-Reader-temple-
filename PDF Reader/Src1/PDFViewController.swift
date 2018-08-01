@@ -149,7 +149,7 @@ class PDFViewController: UIViewController,
     }
     func loadInterstitial()
     {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3023134250340516/7390761864")
+        interstitial = GADInterstitial(adUnitID: AppControl.sharedInstance.INTERSTITIAL)
         let request = GADRequest()
         interstitial.load(request)
     }

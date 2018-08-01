@@ -18,7 +18,6 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
     var window: UIWindow?
-    var interstitial: GADInterstitial!
     let gcmMessageIDKey = "gcm.message_id"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
@@ -31,17 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         registerSetupForRemoteNotification()
         NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
         
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-3023134250340516~4054152080")
+//        GADMobileAds.configure(withApplicationID: "ca-app-pub-3023134250340516~4054152080")
         
-        loadInterstitial()
         return true
-    }
-    
-    func loadInterstitial()
-    {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3023134250340516/7390761864")
-        let request = GADRequest()
-        interstitial.load(request)
     }
     
     //MARK: -  Register For Remote Notification

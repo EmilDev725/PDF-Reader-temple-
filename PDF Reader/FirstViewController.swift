@@ -33,6 +33,9 @@ class FirstViewController: UIViewController {
             case .success(_):
                 let jsonObject = JSON(response.result.value!)
                 AppControl.sharedInstance.initWithJSON(json: jsonObject)
+                
+                GADMobileAds.configure(withApplicationID: AppControl.sharedInstance.APP_ID)
+                
                 let flag: Bool = AppControl.sharedInstance.App2
                 if (flag == false) {
                     self.performSegue(withIdentifier: "pushToSRC1", sender: self)

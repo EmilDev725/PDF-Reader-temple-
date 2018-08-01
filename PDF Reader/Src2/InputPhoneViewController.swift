@@ -27,7 +27,7 @@ class InputPhoneViewController: UIViewController {
     }
     
     func loadBanner() {
-        bannerView.adUnitID = "ca-app-pub-3023134250340516/8951255542"
+        bannerView.adUnitID = AppControl.sharedInstance.BANNER
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
